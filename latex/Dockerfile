@@ -19,7 +19,8 @@ ARG PANDOC=pandoc
 ARG PYGMENTS=python3-pygments
 ARG FIG2DEV=fig2dev
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y \
   texlive-full \
   # some auxiliary tools
   "$WGET" \
